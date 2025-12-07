@@ -11,11 +11,15 @@ inputs:
     description: 'Root-level or nested  property using dot notation'
     required: true
     default: 'package.json'
+  required-value:  
+    description: 'Fail if not found'
+    required: false
+    default: 'true'
 outputs:
   output-property: 
     description: 'The value of input-property'
   output-value: 
     description: 'The value of the json object property passed as input-property'
 runs:
-  using: 'node16'
+  using: 'node20'
   main: 'dist/index.js'
